@@ -2,20 +2,27 @@
 
 ## Main Categories
 1. Policies
+```
   a. Deny by Default
   b. Accept by Default
+  ```
 2. Specific Attacks Prevention
-  a. Ping Flood
-  b. TCP SYN Flood
-  c. Malformed Packets
+```
+  a. Ping Flood  
+  b. TCP SYN Flood  
+  c. Malformed Packets  
   d. Smurf Attacks
+  ```
 3. Worst Case Options
-  a. Block all incoming traffic
+```
+  a. Block all incoming traffic  
   b. Flush all rules
+  ```
 4. Backup / Restore
+```
   a. Backup current rules
   b. Restore from backup
-
+```
 ### Introduction
 I wanted to create a script to help enhance my understanding of cyber security concepts and to learn more about iptables.
 
