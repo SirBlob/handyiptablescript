@@ -31,6 +31,11 @@ I wanted to create a script to help enhance my understanding of cyber security c
 2. Add other handy iptables commands (Initial Setup, etc..)
 3. Add IPv6 conversion as currently it is only for IPv4
 
+#### Optimizations to keep in mind
+1. Place loopback / forwarding rules as early as possible
+2. Use state / connection tracking modules to bypass fire wall for established connections
+3. Combine rules to standard TCP clientserver connections to single rule w/ port list heavy traffic servers rules as early as possible
+
 #### Sources
 1. https://www.digitalocean.com/community/tutorials/iptables-essentials-common-firewall-rules-and-commands
 2. https://www.crybit.com/how-to-save-current-iptables-rules/
