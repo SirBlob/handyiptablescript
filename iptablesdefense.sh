@@ -1,5 +1,12 @@
 #!/bin/bash
+#Some ideas to add https://www.digitalocean.com/community/tutorials/iptables-essentials-common-firewall-rules-and-commands
 #Note these rules are only for ipv4 and in the future add ipv6 if needed
+
+: ' Sources
+https://www.crybit.com/how-to-save-current-iptables-rules/
+https://www.digitalocean.com/community/tutorials/how-to-list-and-delete-iptables-firewall-rules#:~:text=To%20flush%20a%20specific%20chain,sudo%20iptables%20%2DF%20INPUT
+https://linuxhint.com/how_to_use_ip_tables_to_block_icmp/
+'
 
 dash() {
 	printf -- '-%.0s' {1..100}; echo ""
@@ -146,10 +153,15 @@ do
 						read -p "Would you like to back up the current rules before proceeding? [Y/N]: " confirmremove
 						if [[ "$confirmremove" =~ ^(yes|y|Y|Yes)$ ]]
 						then
-							backuptable
 							if backuptable
 							then
+								dash
+								echo "FLushing Rules"
+								dash
 								iptables --flush
+								dash
+								echo "See current iptable"
+								dash
 								iptables -L --line-numbers
 							else
 								dash
@@ -164,6 +176,9 @@ do
 							echo "Flushing all rules"
 							dash
 							iptables --flush
+							dash
+							echo "See current iptable"
+							dash
 							iptables -L --line-numbers
 						else
 							invalidchoice
