@@ -1,12 +1,5 @@
 #!/bin/bash
-#Some ideas to add https://www.digitalocean.com/community/tutorials/iptables-essentials-common-firewall-rules-and-commands
 #Note these rules are only for ipv4 and in the future add ipv6 if needed
-
-: ' Sources
-https://www.crybit.com/how-to-save-current-iptables-rules/
-https://www.digitalocean.com/community/tutorials/how-to-list-and-delete-iptables-firewall-rules#:~:text=To%20flush%20a%20specific%20chain,sudo%20iptables%20%2DF%20INPUT
-https://linuxhint.com/how_to_use_ip_tables_to_block_icmp/
-'
 
 dash() {
 	printf -- '-%.0s' {1..100}; echo ""
